@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fruit & Vegetable Disease Classifier</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+  h1 { text-align: center; }
+  #result { margin-top: 20px; font-size: 1.2em; font-weight: bold; }
+  input[type="file"] { margin-top: 10px; }
+  button { margin-top: 10px; padding: 10px 15px; font-size: 1em; }
+</style>
+</head>
+<body>
+  <h1>Upload Fruit/Vegetable Image</h1>
+  <input type="file" id="imageInput" accept="image/*" />
+  <br />
+  <button onclick="uploadImage()">Predict</button>
+  <div id="result"></div>
+
+  <script>
+    async function uploadImage() {
+      const input = document.getElementById('imageInput');
+      if (input.files.length === 0) {
+        alert('Please select an image file');
+        return;
+      }
+      const file = input.files[0];
+      const formData = new FormData();
+      formData.append('file', file);
+
+      document.getElementById('result').innerText = 'Predicting...';
+
+      try {
+        const response = await fetch('/predict', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+        if (data.prediction) {
+          document.getElementById('result').innerText = 'Prediction: ' + data.prediction;
+        } else if (data.error) {
+          document.getElementById('result').innerText = 'Error: ' + data.error;
+        }
+      } catch (error) {
+        document.getElementById('result').innerText = 'Error: ' + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
