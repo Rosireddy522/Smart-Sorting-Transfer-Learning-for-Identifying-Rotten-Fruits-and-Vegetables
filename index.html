@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NutriGaze</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">NUTRIGAZE</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#predict">Predict</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p>Welcome to <strong>NutriGaze</strong></p>
+      <h1>GREENGUARD INSIGHTS</h1>
+      <p>We are a team of innovative scientists and technologists dedicated to ensuring your produce is always fresh and healthy.</p>
+      <button onclick="document.getElementById('predict').scrollIntoView({behavior: 'smooth'})">GET STARTED</button>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Learn More <span>About Us</span></h2>
+    <p><strong>NutriGaze</strong> is a pioneering organization dedicated to enhancing the quality and safety of your fruits and vegetables.</p>
+    <ul>
+      <li>✔ Comprehensive analysis and grading of fruits and vegetables.</li>
+      <li>✔ Continuous monitoring of produce freshness.</li>
+      <li>✔ Innovative solutions to minimize food waste.</li>
+    </ul>
+    <p>Our team is our greatest asset. We bring expertise from agricultural science, data analytics, software engineering, and food technology.</p>
+  </section>
+
+  <section id="predict" class="predict">
+    <h2>Image Classification</h2>
+    <form>
+      <label>Upload Your Image:</label>
+      <input type="file" accept="image/*">
+      <button type="submit">Predict</button>
+    </form>
+  </section>
+
+  <section id="result" class="result">
+    <h3>FreshEye Detection</h3>
+    <p>Result of fruits and vegetables</p>
+    <div class="output-box">Tomato__Rotten (27)</div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 NutriGaze | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
