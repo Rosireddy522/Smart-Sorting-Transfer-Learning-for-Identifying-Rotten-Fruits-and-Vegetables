@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriGaze - Greenguard Insights</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    header {
+      background-color: #000;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active, nav a:hover {
+      border-bottom: 2px solid #fff;
+    }
+    .hero {
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHV_Y3aMTapyi_R43Gk8YyuiCc4xaG5-HS3g&s);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      padding: 0.5rem 1.2rem;
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      cursor: pointer;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .about {
+      text-align: center;
+    }
+    .about h2 {
+      color: #ff4c61;
+    }
+    .about .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .box {
+      flex: 1;
+      max-width: 500px;
+      text-align: left;
+    }
+    .about ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    .about ul li::before {
+      content: "✔ ";
+      color: #ff4c61;
+    }
+    .predict {
+      text-align: center;
+      border-top: 1px solid #000;
+    }
+    .predict input[type="file"] {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      width: 300px;
+    }
+    .predict button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .output {
+      text-align: center;
+      padding: 3rem 2rem;
+      background-color: #f9f9f9;
+    }
+    .output-box {
+      display: inline-block;
+      padding: 1.5rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+    }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>NUTRIGAZE</strong></div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#predict">Predict</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero" id="home">
+    <p>Welcome to <strong>NutriGaze</strong></p>
+    <h1>GREENGUARD INSIGHTS</h1>
+    <p>We are a team of innovative scientists and technologists dedicated to ensuring your produce is always fresh and healthy.</p>
+    <button class="btn">GET STARTED</button>
+  </section>
+  <section class="about" id="about">
+    <div class="label" style="color: #ff4c61; font-weight: bold;">ABOUT</div>
+    <h2>Learn More <span style="color: black;">About Us</span></h2>
+    <p>NutriGaze is a pioneering organization dedicated to enhancing the quality and safety of your fruits and vegetables.</p>
+    <div class="content">
+      <div class="box">
+        <ul>
+          <li>Comprehensive analysis and grading of fruits and vegetables based on ripeness and nutritional content.</li>
+          <li>Continuous monitoring of produce freshness from farm to table.</li>
+          <li>Innovative solutions to minimize food waste by identifying and separating rotten produce early in the supply chain.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <p>Our team is our greatest asset. We are a diverse group of experts in fields such as agricultural science, data analytics, software engineering, and food technology. Together, we bring a wealth of knowledge and experience to tackle the challenges of food quality and safety.</p>
+      </div>
+    </div>
+    <button class="btn" style="color:#ff4c61; border: 2px solid #ff4c61; background: white; margin-top: 2rem;">Learn More</button>
+  </section>
+  <section class="predict" id="predict">
+    <h2>Image Classification</h2>
+    <p>Upload Your Image:</p>
+    <input type="file" />
+    <br/>
+    <button>predict</button>
+  </section>
+  <section class="output">
+    <h3>FreshEye Detection</h3>
+    <div class="output-box">
+      <strong>Result of fruits and vegetables</strong><br/><br/>
+    </div>
+  </section>
+  <footer id="contact">
+    &copy; 2025 NutriGaze. All rights reserved.
+  </footer>
+</body>
+</html>
